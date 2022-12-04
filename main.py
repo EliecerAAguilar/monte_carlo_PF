@@ -1,9 +1,13 @@
-from CodigoPY import ejemplo01
+from CodigoPY.ejemplo01 import Ejemplo01
 
 
-def print_hi(name):
-    ejemplo01.run()
+def main():
+    try:
+        ejemplo01 = Ejemplo01()
+        ejemplo01.run()
+    except Exception as e:
+        print(e.args)
 
 
 if __name__ == '__main__':
-    print_hi('done!')
+    main()
