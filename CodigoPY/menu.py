@@ -1,5 +1,6 @@
 from CodigoPY.ejemplo01 import Ejemplo01
 from CodigoPY.ejemplo02 import Ejemplo02
+from CodigoPY.ejemplo03 import Ejemplo03
 from os import system
 class Menu:
     """
@@ -112,6 +113,8 @@ class Menu:
         :rtype None
         """
         print('Has elegido ejecutar el Ejemplo #3: ')
+        ejemplo03 = Ejemplo03()
+        ejemplo03.run()
 
     def ejemplo4(self) -> None:
         """
