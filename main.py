@@ -1,7 +1,7 @@
 from CodigoPY.menu import Menu
 
 def main() -> None:
-    """script principal para la ejecucion de los ejemplos de Monte carlo como proyecto final de Modelado"""
+    """script principal para la ejecucion de los ejemplos de Monte carlo como proyecto final de Modelado y simulacion"""
     try:
         menu = Menu()
         menu.menu_principal()
