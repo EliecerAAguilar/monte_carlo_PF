@@ -1,6 +1,13 @@
 from CodigoPY.ejemplo01 import Ejemplo01
 from CodigoPY.ejemplo02 import Ejemplo02
 from CodigoPY.ejemplo03 import Ejemplo03
+from CodigoPY.ejemplo04 import Ejemplo04
+from CodigoPY.ejemplo05 import Ejemplo05
+from CodigoPY.ejemplo06 import Ejemplo06
+from CodigoPY.ejemplo07 import Ejemplo07
+from CodigoPY.ejemplo08 import Ejemplo08
+from CodigoPY.ejemplo09 import Ejemplo09
+from CodigoPY.ejemplo10 import Ejemplo10
 from os import system
 class Menu:
     """
@@ -91,7 +98,7 @@ class Menu:
         :return: nada
         :rtype None
         """
-        print('Has elegido ejecutar el Ejemplo #1: ')
+        print('Has elegido ejecutar el Ejemplo #1: \nDescompostura de una maquina')
         ejemplo01= Ejemplo01()
         ejemplo01.run()
 
@@ -101,7 +108,7 @@ class Menu:
         :return: nada
         :rtype None
         """
-        print('Has elegido ejecutar el Ejemplo #2: ')
+        print('Has elegido ejecutar el Ejemplo #2: \nInventario')
         ejemplo02 = Ejemplo02()
         ejemplo02.run()
 
@@ -112,7 +119,7 @@ class Menu:
         :return: nada
         :rtype None
         """
-        print('Has elegido ejecutar el Ejemplo #3: ')
+        print('Has elegido ejecutar el Ejemplo #3: \nFuncion de Efectividad')
         ejemplo03 = Ejemplo03()
         ejemplo03.run()
 
@@ -122,7 +129,9 @@ class Menu:
         :return: nada
         :rtype None
         """
-        print('Has elegido ejecutar el Ejemplo #4: ')
+        print('Has elegido ejecutar el Ejemplo #4: \nArea bajo la curva')
+        ejemplo04 = Ejemplo04()
+        ejemplo04.run()
 
     def ejemplo5(self) -> None:
         """
@@ -130,7 +139,10 @@ class Menu:
         :return: nada
         :rtype None
         """
-        print('Has elegido ejecutar el Ejemplo #5: ')
+        print('Has elegido ejecutar el Ejemplo #5: \nCalculo de \u03C0 por el método de la aguja de Buffón')
+        ejemplo05 = Ejemplo05()
+        ejemplo05.run()
+
 
     def ejemplo6(self) -> None:
         """
@@ -138,7 +150,9 @@ class Menu:
         :return: nada
         :rtype None
         """
-        print('Has elegido ejecutar el Ejemplo #6: ')
+        print('Has elegido ejecutar el Ejemplo #6: \nTambaleo del Borracho')
+        ejemplo06 = Ejemplo06()
+        ejemplo06.run()
 
     def ejemplo7(self) -> None:
         """
@@ -146,7 +160,9 @@ class Menu:
         :return: nada
         :rtype None
         """
-        print('Has elegido ejecutar el Ejemplo #7: ')
+        print('Has elegido ejecutar el Ejemplo #7: \nEstrategias de Servicio')
+        ejemplo07 = Ejemplo07()
+        ejemplo07.run()
 
     def ejemplo8(self) -> None:
         """
@@ -154,7 +170,9 @@ class Menu:
         :return: nada
         :rtype None
         """
-        print('Has elegido ejecutar el Ejemplo #8: ')
+        print('Has elegido ejecutar el Ejemplo #8: \nGeneracionde una variable aleatoria exponencial')
+        ejemplo08 = Ejemplo08()
+        ejemplo08.run()
 
     def ejemplo9(self) -> None:
         """
@@ -162,7 +180,9 @@ class Menu:
         :return: nada
         :rtype None
         """
-        print('Has elegido ejecutar el Ejemplo #9: ')
+        print('Has elegido ejecutar el Ejemplo #9: \nJuego de Craps')
+        ejemplo09 = Ejemplo09()
+        ejemplo09.run()
 
     def ejemplo10(self) -> None:
         """
@@ -170,7 +190,9 @@ class Menu:
         :return: nada
         :rtype None
         """
-        print('Has elegido ejecutar el Ejemplo #10: ')
+        print('Has elegido ejecutar el Ejemplo #10: \nJuego de Penny')
+        ejemplo10 = Ejemplo10()
+        ejemplo10.run()
 
     def salir(self) -> None:
         """
