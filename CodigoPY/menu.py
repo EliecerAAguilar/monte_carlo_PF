@@ -170,7 +170,7 @@ class Menu:
         :return: nada
         :rtype None
         """
-        print('Has elegido ejecutar el Ejemplo #8: \nGeneracionde una variable aleatoria exponencial')
+        print('Has elegido ejecutar el Ejemplo #8: \nGeneracion de una variable aleatoria exponencial')
         ejemplo08 = Ejemplo08()
         ejemplo08.run()
 
