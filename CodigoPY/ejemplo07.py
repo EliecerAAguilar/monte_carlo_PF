@@ -1,59 +1,83 @@
 from tabulate import tabulate
 import math
 import random
+from typing import List
 
-def cola(n):
-    data = []
-    serviceTimeTotal = 0
-    for i in range(n):
-        nTiempoArribo=int(random.uniform(0,100))
-        tiempoLlegadas=0
-        
-        if(nTiempoArribo>=0 and nTiempoArribo>=14):
-            tiempoLlegadas=0.5
-        if(nTiempoArribo>=15 and nTiempoArribo>=39):
-            tiempoLlegadas=1.0
-        if(nTiempoArribo>=40 and nTiempoArribo>=69):
-            tiempoLlegadas=1.5
-        if(nTiempoArribo>=70 and nTiempoArribo>=94):
-            tiempoLlegadas=2.0
-        if(nTiempoArribo>=95 and nTiempoArribo>=99):
-            tiempoLlegadas=2.5
+class Ejemplo07:
+    """CLase del Ejemplo #7 Estrategias de Servicio"""
+    def cola(self, n: int) -> None:
+        """
+        metodo para generar los valores de cola
+        :param n: cantidad maxima de valores a generar para la coda
+        :return: Nada
+        :rtype None
+        """
+        data: List[tuple] = []
+        serviceTimeTotal = 0
+        for i in range(n):
+            nTiempoArribo=int(random.uniform(0,100))
+            tiempoLlegadas=0
 
-        r=int(random.uniform(1,10))
-        tiempoServicio=1.2*math.log(r)
+            if 14>= nTiempoArribo >=0:
+                tiempoLlegadas=0.5
 
-        serviceTimeTotal+=tiempoServicio
+            if 39>= nTiempoArribo >=15:
+                tiempoLlegadas=1.0
 
-        data.append((i+1,nTiempoArribo,tiempoLlegadas,r,tiempoServicio))
+            if 40>= nTiempoArribo >=69:
+                tiempoLlegadas=1.5
 
-        
+            if 70 >= nTiempoArribo >=94:
+                tiempoLlegadas=2.0
 
-        
-    present(data)
+            if 95 >= nTiempoArribo >=99:
+                tiempoLlegadas=2.5
 
-    tiempoTotalServicio=serviceTimeTotal+0.3+0.2
 
-    CT=5*(tiempoTotalServicio)+20*(8*8)
-    print('Costo del Sistema (CT): {}'.format(CT))
+            r=int(random.uniform(1,10))
+            tiempoServicio=1.2*math.log(r)
 
-    print('Costo promedio por hora (CT): {}'.format(CT/8.8))
+            serviceTimeTotal+=tiempoServicio
 
-    
-def present(data):
-    headers = [ '# de llegadas',
-                'Tiempo entre Arribo', 
-                'Tiempo entre llegadas',
-                'Tiempo de Servicio # random',
-                'Tiempo de Servicio', 
-                ]
+            data.append((i+1,nTiempoArribo,tiempoLlegadas,r,tiempoServicio))
 
-    print(tabulate(data, headers=headers, showindex=False))
 
-def main():
-    #Lectura de datos
-    print('ESTRATEGIAS DE SERVICIOS (Colas)')
-    n = int(input('Introduzca número de llegadas: '))
-    cola(n)
 
-main()
+
+        self.present(data)
+
+        tiempoTotalServicio=serviceTimeTotal+0.3+0.2
+
+        CT=5*(tiempoTotalServicio)+20*(8*8)
+        print('Costo del Sistema (CT): {}'.format(CT))
+
+        print('Costo promedio por hora (CT): {}'.format(CT/8.8))
+
+
+    def present(self, data: List[tuple]) -> None:
+        """
+        Metodo para presentar/ Imprimir los valores de la simulacion
+        :param data: datos de la simulacion
+        :type data: List[tuple]
+        :return: Nada
+        :rtype None
+        """
+        headers = [ '# de llegadas',
+                    'Tiempo entre Arribo',
+                    'Tiempo entre llegadas',
+                    'Tiempo de Servicio # random',
+                    'Tiempo de Servicio',
+                    ]
+
+        print(tabulate(data, headers=headers, showindex=False))
+
+    def run(self):
+        """
+        Metodo para ejecutar la simulacion del ejemplo #7
+        :return: Nada
+        :rtype None
+        """
+        print('ESTRATEGIAS DE SERVICIOS (Colas)')
+        n: int = int(input('Introduzca número de llegadas: '))
+        self.cola(n)
+
