@@ -8,7 +8,7 @@ from CodigoPY.ejemplo07 import Ejemplo07
 from CodigoPY.ejemplo08 import Ejemplo08
 from CodigoPY.ejemplo09 import Ejemplo09
 from CodigoPY.ejemplo10 import Ejemplo10
-from subprocess import run as clear_console
+
 class Menu:
     """
     Clase Menu
@@ -63,7 +63,6 @@ class Menu:
         """
         opcion: str = ""
         while opcion != opcion_salida:
-            clear_console("clear",shell=True)
             print("#"*80)
             self.mostrar_menu(opciones)
             opcion = self.leer_opcion(opciones)
